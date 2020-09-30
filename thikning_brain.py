@@ -11,3 +11,17 @@ train_samples = 11500
 validation_samples = 1000
 epochs = 10
 batch_size = 16
+
+if K.image_data_format() == 'channels_first':
+    input_shape = (3, image_width, image_height)
+else: 
+    input_shape = (image_width, image_height, 3)
+
+model = Sequential()
+model.add(Conv2D(32, (2, 2), input_shape = input_shape))
+model.add(Activation('relu'))
+model.add(MaxPooling2D(pool_size=(2, 2)))
+
+model.add(Conv2D(32, (2, 2), input_shape = input_shape))
+model.add(Activation('relu'))
+model.add(MaxPooling2D(pool_size=(2, 2)))
