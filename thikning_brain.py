@@ -68,4 +68,5 @@ model.fit(
     validation_steps=validation_samples // batch_size
 )
 
-model.save_weights('saved_model.h5')
+#model.save_weights('saved_model.h5')
+model.save("my_model")
