@@ -14,7 +14,7 @@ test_image = np.expand_dims(test_image, axis=0)
 result = model.predict(test_image)
 print(result)
 
-"""if result[0][0] // 1 == 0: 
+if result[0][0] // 1 == 0: 
     print("Cat")
 else:
-    print("Dog")"""
+    print("Dog")
