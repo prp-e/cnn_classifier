@@ -5,11 +5,11 @@ from keras import backend as K
 
 image_height, image_width = 224, 224 
 
-train_data_dir = 'dataset/train_data'
+train_data_dir = 'dataset/training_data'
 validation_data_dir = 'dataset/validation_data'
-train_samples = 11500 
-validation_samples = 1000
-epochs = 10
+train_samples = 3800
+validation_samples = 300
+epochs = 15
 batch_size = 16
 
 if K.image_data_format() == 'channels_first':
