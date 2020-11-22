@@ -69,4 +69,4 @@ model.fit(
 )
 
 #model.save_weights('saved_model.h5')
-model.save("my_model")
+model.save("pizza_model")
