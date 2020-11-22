@@ -2,6 +2,6 @@
 dataset_2/* 
 dataset/*
 *.h5
-my_model/*
+*_model/*
 test_data/*
 *.txz 
