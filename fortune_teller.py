@@ -22,8 +22,7 @@ result = model.predict(test_image)
 
 if result[0][0] // 1 == 0: 
     result = pizza_model.predict(test_image)
-    print(result)
-    if result[0][0] // 1 == 0:
+    if result[0][0] // 1 == 1:
         print("It's Pizza")
     else:
         print("It's food but not pizza!")
