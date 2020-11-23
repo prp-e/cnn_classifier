@@ -7,7 +7,7 @@ image_height, image_width = 224, 224
 
 train_data_dir = 'dataset_2/training_data'
 validation_data_dir = 'dataset_2/validation_data'
-train_samples = 1000
+train_samples = 3000
 validation_samples = 250
 epochs = 15
 batch_size = 16
