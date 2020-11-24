@@ -5,8 +5,8 @@ from keras import backend as K
 
 image_height, image_width = 224, 224 
 
-train_data_dir = 'dataset_2/training_data'
-validation_data_dir = 'dataset_2/validation_data'
+train_data_dir = 'dataset_3/training_data'
+validation_data_dir = 'dataset_3/validation_data'
 train_samples = 3000
 validation_samples = 250
 epochs = 15
@@ -69,4 +69,4 @@ model.fit(
 )
 
 #model.save_weights('saved_model.h5')
-model.save("pizza_model")
+model.save("steak_model")
