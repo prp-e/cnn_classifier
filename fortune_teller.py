@@ -21,7 +21,19 @@ test_image = np.expand_dims(test_image, axis=0)
 result = model.predict(test_image)
 #print(result)
 
+if result[0][0] //1 == 0:  
+    result_is_pizza = pizza_model.predict(test_image) 
+    result_is_steak = steak_model.predict(test_image) 
 
+    if result_is_pizza[0][0] // 1 == 1:
+        print("Pizza") 
+    elif result_is_steak[0][0] // 1 == 1: 
+        print("Steak") 
+    else: 
+        print("Food detected, details not available.") 
+    
+else:
+    print("No food detected.")
 """
 if result[0][0] // 1 == 0: 
     result = pizza_model.predict(test_image)
