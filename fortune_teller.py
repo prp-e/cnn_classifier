@@ -27,11 +27,11 @@ if result[0][0] // 1 == 0:
         print("It's Pizza")
     else:
         result = steak_model.predict(test_image) 
-        
+
         if result[0][0] // 1 == 1:
             print("Steak") 
-        
-        print("It's food but not pizza, nor steak.")
+        else:
+            print("It's food but not pizza, nor steak.")
 
 else:
     print("Not Food")
