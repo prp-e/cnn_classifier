@@ -10,7 +10,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--pic', required=True) 
 pic = parser.parse_args() 
 pic = pic.pic 
-model = load_model('my_model')
+food_model = load_model('my_model')
 pizza_model = load_model('pizza_model')
 steak_model = load_model('steak_model')
 
@@ -21,6 +21,8 @@ test_image = np.expand_dims(test_image, axis=0)
 result = model.predict(test_image)
 #print(result)
 
+
+"""
 if result[0][0] // 1 == 0: 
     result = pizza_model.predict(test_image)
     if result[0][0] // 1 == 1:
@@ -35,3 +37,4 @@ if result[0][0] // 1 == 0:
 
 else:
     print("Not Food")
+"""
