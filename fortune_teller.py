@@ -19,7 +19,6 @@ test_image = image.img_to_array(test_image)
 test_image = np.expand_dims(test_image, axis=0)
 
 result = food_model.predict(test_image)
-#print(result)
 
 if result[0][0] //1 == 0:  
     result_is_pizza = pizza_model.predict(test_image) 
@@ -34,19 +33,3 @@ if result[0][0] //1 == 0:
     
 else:
     print("No food detected.")
-"""
-if result[0][0] // 1 == 0: 
-    result = pizza_model.predict(test_image)
-    if result[0][0] // 1 == 1:
-        print("It's Pizza")
-    else:
-        result = steak_model.predict(test_image) 
-
-        if result[0][0] // 1 == 1:
-            print("Steak") 
-        else:
-            print("It's food but not pizza, nor steak.")
-
-else:
-    print("Not Food")
-"""
