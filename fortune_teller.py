@@ -18,7 +18,7 @@ test_image = image.load_img(pic , target_size=(224, 224))
 test_image = image.img_to_array(test_image)
 test_image = np.expand_dims(test_image, axis=0)
 
-result = model.predict(test_image)
+result = food_model.predict(test_image)
 #print(result)
 
 if result[0][0] //1 == 0:  
