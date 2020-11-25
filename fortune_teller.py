@@ -12,6 +12,7 @@ pic = parser.parse_args()
 pic = pic.pic 
 model = load_model('my_model')
 pizza_model = load_model('pizza_model')
+steak_model = load_model('steak_model')
 
 test_image = image.load_img(pic , target_size=(224, 224))
 test_image = image.img_to_array(test_image)
@@ -25,7 +26,12 @@ if result[0][0] // 1 == 0:
     if result[0][0] // 1 == 1:
         print("It's Pizza")
     else:
-        print("It's food but not pizza!")
+        result = steak_model.predict(test_image) 
+        
+        if result[0][0] // 1 == 1:
+            print("Steak") 
+        
+        print("It's food but not pizza, nor steak.")
 
 else:
     print("Not Food")
